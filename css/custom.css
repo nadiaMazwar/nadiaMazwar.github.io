@@ -184,3 +184,38 @@
           box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
   font-family: 'Poppins',sans-serif;
 }
+
+/* **********************************
+      Social media buton
+ ********************************** */
+
+ .btn-gradient-move {
+  background: -webkit-radial-gradient(#FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient-move:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.btn-gradient-move:before {
+  background: -webkit-radial-gradient(#FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  transition: .5s;
+}
+
+.btn-gradient-move:hover:before {
+  /* filter: blur(20px); */
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
