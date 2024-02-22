@@ -184,7 +184,7 @@
   .card__description {
     margin: 10px 0 0;
     font-size: 14px;
-    color: #777;
+    color: #000;
     line-height: 1.4;
   }
 
@@ -240,4 +240,47 @@
   /* filter: blur(20px); */
   opacity: 1;
   animation: animate 8s linear infinite;
+}
+
+/* **********************************
+        Loader
+ ********************************** */
+
+ .loader-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFAC;
+  z-index: 99999;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #5d4a1f;
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15{ 
+  100%{transform: rotate(1turn)}
 }
