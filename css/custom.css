@@ -25,14 +25,14 @@
 ********************************** */
 
 section .flip-card-inner {
-  perspective: 1000px;
+  /* perspective: 1000px; */
   /* background-color: #000; */
 }
 
 .flip-card-inner {
-  animation: noTransformAnim linear backwards reverse;
+  /* animation: noTransformAnim linear backwards reverse; */
   /* animation-timeline: view(); */
-  transform: rotateX(-40deg);
+  /* transform: rotateX(-40deg); */
   opacity: 0;
 }
 
