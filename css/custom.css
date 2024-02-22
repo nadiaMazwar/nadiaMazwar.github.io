@@ -31,7 +31,7 @@ section .flip-card-inner {
 
 .flip-card-inner {
   animation: noTransformAnim linear backwards reverse;
-  animation-timeline: view();
+  /* animation-timeline: view(); */
   transform: rotateX(-40deg);
   opacity: 0;
 }
