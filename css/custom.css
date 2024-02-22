@@ -24,22 +24,17 @@
         Header profile
 ********************************** */
 
-/* section .flip-card-inner {
-  perspective: 1000px;
+.fade-card {
+  transition: opacity 0.5s ease-in-out;
 }
 
-.flip-card-inner {
-  animation: noTransformAnim linear backwards reverse;
-  animation-timeline: view();
-  transform: rotateX(-40deg);
+.fade-card.fade-out {
   opacity: 0;
 }
 
-@keyframes noTransformAnim {
-  40% { transform: none; opacity: 1; }
-  100% { transform: none; opacity: 1; }
-} */
-
+.fade-card.fade-in {
+  opacity: 1;
+}
 
 /* **********************************
         Projects list
