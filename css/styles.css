@@ -76,6 +76,7 @@
   --bs-link-hover-color: #1826c2;
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
+  --bs-black-bg : linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 *,

@@ -19,6 +19,29 @@
   -webkit-text-fill-color: transparent;
 }
 
+
+/* **********************************
+        Header profile
+********************************** */
+
+section .flip-card-inner {
+  perspective: 1000px;
+  /* background-color: #000; */
+}
+
+.flip-card-inner {
+  animation: noTransformAnim linear backwards reverse;
+  animation-timeline: view();
+  transform: rotateX(-40deg);
+  opacity: 0;
+}
+
+@keyframes noTransformAnim {
+  40% { transform: none; opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+
+
 /* **********************************
         Projects list
 ********************************** */
