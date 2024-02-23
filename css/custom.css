@@ -183,6 +183,43 @@
     line-height: 1.4;
   }
 
+  .card-1 {
+    margin-top: 0px;
+  }
+
+  .card-2 {
+    margin-top: 70px;
+  }
+
+  .card-3 {
+    margin-top: -130px;
+  }
+
+  .card-4 {
+    margin-top: -70px;
+  }
+
+  .card-5 {
+    margin-top: -120px;
+  }
+
+  .card-6 {
+    margin-top: 0px;
+  }
+
+  .card-7 {
+    margin-top: -160px;
+  }
+
+  .card-8 {
+    margin-top: -40px;
+  }
+
+  .card-9 {
+    margin-right: 550px;
+    margin-top: -170px
+  }
+    
 /* **********************************
         Resume page
   ********************************** */
