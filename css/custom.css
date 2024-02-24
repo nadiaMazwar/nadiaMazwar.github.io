@@ -1,0 +1,321 @@
+/* **********************************
+        Main custom
+********************************** */
+
+.bg-gold {
+  --bs-bg-opacity: 1;
+  background-color: #FFFFAC ;
+}
+
+.text-gold-dark {
+  background: #5d4a1f;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light {
+  background: #FFFFAC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* **********************************
+        Header profile
+********************************** */
+
+.fade-card {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-card.fade-out {
+  opacity: 0;
+}
+
+.fade-card.fade-in {
+  opacity: 1;
+}
+
+/* **********************************
+        Projects list
+********************************** */
+.container-box {
+    position: relative;
+    height: 300px;
+    display: flex;
+  }
+
+.card-box {
+    display: flex;
+    height: 280px;
+    width: 200px;
+    background-color: #5d4a1f;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+    
+  .card-box:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card-box:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card-box:hover ~ .card-box {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+
+  .card-box:hover .filledbar {
+    width: 100%;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 80%;
+  }
+  
+  .emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: var(--bs-bg-gold-gradient);
+    transition: 0.6s ease-out;
+  }
+
+  .card-box img {
+    position: absolute;
+    top: 110px;
+    height: 150px;
+    width: 170px;
+    border-radius: 10px;
+  }
+
+  /* **********************************
+        Projects page
+  ********************************** */
+  .flip-card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .flip-card img {
+    width: 500px;
+    height: 300px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .flip-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .flip-card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .flip-card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.4;
+  }
+
+  .card-1 {
+    margin-top: 0px;
+  }
+
+  .card-2 {
+    margin-top: 70px;
+  }
+
+  .card-3 {
+    margin-top: -130px;
+  }
+
+  .card-4 {
+    margin-top: -70px;
+  }
+
+  .card-5 {
+    margin-top: -120px;
+  }
+
+  .card-6 {
+    margin-top: 0px;
+  }
+
+  .card-7 {
+    margin-top: -160px;
+  }
+
+  .card-8 {
+    margin-top: -40px;
+  }
+
+  .card-9 {
+    margin-right: 550px;
+    margin-top: -170px
+  }
+    
+/* **********************************
+        Resume page
+  ********************************** */
+  
+#glass .card {
+  /* height: 400px; */
+  /* width: 320px; */
+  background-color: #5d4a1f;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  color: #fff;
+  /* position: absolute; */
+   margin: auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+          box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+  font-family: 'Poppins',sans-serif;
+}
+
+/* **********************************
+      Social media buton
+ ********************************** */
+
+ .btn-gradient-move {
+  background: -webkit-radial-gradient(#FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient-move:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.btn-gradient-move:before {
+  background: -webkit-radial-gradient(#FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  transition: .5s;
+}
+
+.btn-gradient-move:hover:before {
+  /* filter: blur(20px); */
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+
+/* **********************************
+        Loader
+ ********************************** */
+
+ .loader-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFAC;
+  z-index: 99999;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #5d4a1f;
+  animation: l15 1s infinite linear;
+  margin:auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  position:fixed;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15{ 
+  100%{transform: rotate(1turn)}
+}
