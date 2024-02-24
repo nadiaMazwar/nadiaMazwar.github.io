@@ -5,64 +5,50 @@ $(window).load(function () {
     $('.loader-mask').delay(3000).fadeOut('slow');
 });
 
-// card fade
-document.addEventListener('DOMContentLoaded', function () {
-    const card = document.querySelector('.fade-card');
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', function () {
-        const st = window.scrollY || document.documentElement.scrollTop;
-
-        // Check scroll direction
-        if (st > lastScrollTop) {
-            // Scrolling down
-            card.classList.add('fade-out');
-            card.classList.remove('fade-in');
-        } else {
-            // Scrolling up
-            card.classList.add('fade-in');
-            card.classList.remove('fade-out');
-        }
-
-        lastScrollTop = st <= 0 ? 0 : st; // Reset last scroll position if at the top
-    });
-});
-
 // parallex scroll 
-$(document).ready(function() {
-    //parallax scroll
-    $(window).on("load scroll", function() {
-      var parallaxElement = $(".parallex"),
-        parallaxQuantity = parallaxElement.length;
-      window.requestAnimationFrame(function() {
-        for (var i = 0; i < parallaxQuantity; i++) {
-          var currentElement = parallaxElement.eq(i),
-            windowTop = $(window).scrollTop(),
-            elementTop = currentElement.offset().top,
-            elementHeight = currentElement.height(),
-            viewPortHeight = window.innerHeight * 0.5 - elementHeight * 0.5,
-            scrolled = windowTop - elementTop + viewPortHeight;
-          currentElement.css({
-            transform: "translate3d(0," + scrolled * -0.20 + "px, 0)"
-          });
-        }
-      });
-    });
-  });
+var cp_1pxmv = document.querySelector(".card-1");
+var cp_2pxmv = document.querySelector(".card-2");
+var cp_3pxmv = document.querySelector(".card-3");
+var cp_4pxmv = document.querySelector(".card-4");
+var cp_5pxmv = document.querySelector(".card-5");
+var cp_6pxmv = document.querySelector(".card-6");
+var cp_7pxmv = document.querySelector(".card-7");
+var cp_8pxmv = document.querySelector(".card-8");
+var cp_9pxmv = document.querySelector(".card-9");
 
-  // move the card when scroll
-  function loop() {
-
-    Array.prototype.forEach.call(elementsToShow, function(element){
-      if (isElementInViewport(element)) {
-        element.classList.add('is-visible');
-      } else {
-        element.classList.remove('is-visible');
-      }
-    });
-
-    scroll(loop);
+function setTranslate(xPos, yPos, el) {
+  // horizontal position (x), vertical position (y), and depth (z)
+  el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
 }
 
-// Call the loop for the first time
-loop();
+window.addEventListener("DOMContentLoaded", scrollLoop, false);
+ 
+// mobile view
+function isMobile() {
+  return window.innerWidth <= 767; 
+}
+
+// var xScrollPosition;
+var yScrollPosition;
+
+function scrollLoop() {
+  
+  if (!isMobile()) {
+    // xScrollPosition = window.scrollX; // will change when scroll page
+    yScrollPosition = window.scrollY; // will change when scroll page
+
+    // adjust the position of our background elements
+    setTranslate(0, yScrollPosition * -0.7, cp_1pxmv); // bayarnow
+    setTranslate(0, yScrollPosition * -1.3, cp_2pxmv); // mpaychannel
+    setTranslate(0, yScrollPosition * -1, cp_3pxmv); // ipayment
+    setTranslate(0, yScrollPosition * -2, cp_4pxmv); // mhroads
+    setTranslate(0, yScrollPosition * -1.3, cp_5pxmv); // aduan
+    setTranslate(0, yScrollPosition * -2.4, cp_6pxmv); // tempahan
+    setTranslate(0, yScrollPosition * -1.6, cp_7pxmv); // combis
+    setTranslate(0, yScrollPosition * -2.5, cp_8pxmv); // mms
+    setTranslate(0, yScrollPosition * -2.2, cp_9pxmv); // kejuruteraan
+  }
+
+  requestAnimationFrame(scrollLoop);
+}
+
