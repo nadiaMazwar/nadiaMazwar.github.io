@@ -119,7 +119,7 @@
 
   /* **********************************
         Projects page
-  ********************************** */
+  ********************************** */  
   .flip-card {
     position: relative;
     background-color: #f2f2f2;
@@ -182,96 +182,100 @@
   }
 
   /* Desktop view */
-@media (min-width: 768px) {
-  .flip-card {
-    width: 500px;
-    height: 300px;
+  @media (min-width: 768px) {
+    .flip-card {
+      width: 500px;
+      height: 300px;
+    }
+
+    .flip-card img {
+      width: 500px;
+      height: 300px;
+    }
+
+    .card__content {
+      width: 100%;
+      height: 100%;
+    }
+
+    .card__title {
+      font-size: 24px;
+    }
+
+    .card__description {
+      font-size: 14px;
+    }
+
+    .card-1 {
+      margin-top: 0px;
+    }
+    
+    .card-2 {
+      margin-top: 90px;
+    }
+    
+    .card-3 {
+      margin-top: -40px;
+    }
+    
+    .card-4 {
+      margin-top: 170px;
+    }
+    
+    .card-5 {
+      margin-top: -90px;
+      margin-left: 50%
+    }
+    
+    .card-6 {
+      margin-top: 150px;
+    }
+    
+    .card-7 {
+      margin-top: -150px;
+    }
+    
+    .card-8 {
+      margin-top: 50px;
+    }
+    
+    .card-9 {
+      margin-top: -90px;
+    }
   }
 
-  .flip-card img {
-    width: 500px;
-    height: 300px;
+  /* Mobile view */
+  @media (max-width: 767px) {
+    .flip-card {
+      width: 100%; /* Full width on mobile */
+      max-width: 300px; /* Maximum width for larger screens */
+      height: auto;
+    }
+
+    .flip-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card__content {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .card__title {
+      font-size: 10px;
+    }
+
+    .card__description {
+      font-size: 10px;
+    }
+
+    .parallax-container {
+      height: auto;
   }
 
-  .card__content {
-    width: 100%;
-    height: 100%;
   }
-
-  .card__title {
-    font-size: 24px;
-  }
-
-  .card__description {
-    font-size: 14px;
-  }
-
-  .card-1 {
-    margin-top: 0px;
-  }
-  
-  .card-2 {
-    margin-top: -170px;
-  }
-  
-  .card-3 {
-    margin-top: -100px;
-  }
-  
-  .card-4 {
-    margin-top: 0px;
-  }
-  
-  .card-5 {
-    margin-top: -170px;
-  }
-  
-  .card-6 {
-    margin-top: 0px;
-  }
-  
-  .card-7 {
-    margin-top: -160px;
-  }
-  
-  .card-8 {
-    margin-top: -40px;
-  }
-  
-  .card-9 {
-    margin-top: -100px;
-  }
-
-}
-
-/* Mobile view */
-@media (max-width: 767px) {
-  .flip-card {
-    width: 100%; /* Full width on mobile */
-    max-width: 300px; /* Maximum width for larger screens */
-    height: auto;
-  }
-
-  .flip-card img {
-    width: 100%;
-    height: auto;
-  }
-
-  .card__content {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-  }
-
-  .card__title {
-    font-size: 10px;
-  }
-
-  .card__description {
-    font-size: 10px;
-  }
-
-}
 
   
 /* **********************************
