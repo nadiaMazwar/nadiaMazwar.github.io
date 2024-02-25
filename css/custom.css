@@ -181,8 +181,10 @@
     line-height: 1.4;
   }
 
+  /* @media : 575px, 767px, 992px, 1200px, 1400px,  */
+
   /* Desktop view */
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .flip-card {
       width: 500px;
       height: 300px;
@@ -243,9 +245,8 @@
       margin-top: -90px;
     }
   }
-
   /* Mobile view */
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .flip-card {
       width: 100%; /* Full width on mobile */
       max-width: 300px; /* Maximum width for larger screens */
@@ -271,12 +272,15 @@
       font-size: 10px;
     }
 
-    .parallax-container {
-      height: auto;
-  }
+    .custom-justify-content-md-center {
+      justify-content: center !important;
+    }
+
+    .custom-padding-left {
+      padding-left: inherit;
+    }
 
   }
-
   
 /* **********************************
         Resume page
