@@ -411,3 +411,19 @@
 @keyframes l15{ 
   100%{transform: rotate(1turn)}
 }
+
+/* **********************************
+        Fade up animation
+ ********************************** */
+
+ .fade-up{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.fade-up.active{
+  transform: translateY(0);
+  opacity: 1;
+}

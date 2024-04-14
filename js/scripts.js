@@ -18,7 +18,9 @@ var cp_8pxmv = document.querySelector(".card-8");
 
 function setTranslate(xPos, yPos, el) {
   // horizontal position (x), vertical position (y), and depth (z)
-  el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+  if (el && el.style) {
+    el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+  }
 }
 
 window.addEventListener("DOMContentLoaded", scrollLoop, false);
@@ -52,3 +54,21 @@ function scrollLoop() {
   requestAnimationFrame(scrollLoop);
 }
 
+// fade up animation
+function fadeUp() {
+  var reveals = document.querySelectorAll(".fade-up");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", fadeUp);
